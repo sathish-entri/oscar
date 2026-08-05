@@ -24,7 +24,7 @@ export default function Header({ onOpenRfq, onSelectGradeById }) {
         <div className="container header-inner">
           {/* Logo */}
           <a href="#hero" className="brand-logo" onClick={closeMobile}>
-            <img src="./logo_clean.png" alt="OSCAR AUTO FLUX" className="header-logo-img" />
+            <img src="./logo.png" alt="OSCAR AUTO FLUX" className="header-logo-img" />
           </a>
 
           {/* Desktop Navigation */}
@@ -75,7 +75,7 @@ export default function Header({ onOpenRfq, onSelectGradeById }) {
         <div className="mobile-drawer-overlay" onClick={closeMobile}>
           <div className="mobile-drawer-content" onClick={e => e.stopPropagation()}>
             <div className="mobile-drawer-header">
-              <img src="./logo_clean.png" alt="OSCAR AUTO FLUX" style={{ height: '42px', width: 'auto' }} />
+              <img src="./logo.png" alt="OSCAR AUTO FLUX" style={{ height: '42px', width: 'auto' }} />
               <button className="mobile-drawer-close" onClick={closeMobile}>
                 <X size={24} />
               </button>
