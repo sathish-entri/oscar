@@ -30,28 +30,28 @@ export default function IndustriesServed() {
         {/* Photo Gallery Grid */}
         <div className="photo-gallery-grid">
           <div className="gallery-item">
-            <img src="/images/windmill_welding.png" alt="Windmill Tower SAW Welding" />
+            <img src="./images/windmill_welding.png" alt="Windmill Tower SAW Welding" />
             <div className="gallery-item-overlay">
               <div className="gallery-item-label">Windmill Tower SAW Welding</div>
               <div className="gallery-item-sub">AUTOWELD Gr-4 · -40°C Impact · H₂ &lt; 4mL/100g</div>
             </div>
           </div>
           <div className="gallery-item">
-            <img src="/images/hero_banner.png" alt="Heavy Structural Fabrication" />
+            <img src="./images/hero_banner.png" alt="Heavy Structural Fabrication" />
             <div className="gallery-item-overlay">
               <div className="gallery-item-label">Heavy Structural Fabrication</div>
               <div className="gallery-item-sub">AUTOWELD Gr-1 / Gr-3</div>
             </div>
           </div>
           <div className="gallery-item">
-            <img src="/images/lab_testing.png" alt="ASME QA Batch Testing" />
+            <img src="./images/lab_testing.png" alt="ASME QA Batch Testing" />
             <div className="gallery-item-overlay">
               <div className="gallery-item-label">ASME Batch QA Testing</div>
               <div className="gallery-item-sub">XRF Chemical &amp; Mechanical Verification</div>
             </div>
           </div>
           <div className="gallery-item">
-            <img src="/images/flux_manufacturing.png" alt="Flux Granule Manufacturing" />
+            <img src="./images/flux_manufacturing.png" alt="Flux Granule Manufacturing" />
             <div className="gallery-item-overlay">
               <div className="gallery-item-label">Agglomeration &amp; Packaging</div>
               <div className="gallery-item-sub">0.2–2.0mm Grain · &lt;0.05% Moisture</div>

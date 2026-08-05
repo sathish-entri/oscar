@@ -220,7 +220,7 @@ button { cursor: pointer; font-family: var(--font-sans); border: none; }
 }
 .hero-bg {
   position: absolute; inset: 0;
-  background-image: url('/images/hero_banner.png');
+  background-image: url('./images/hero_banner.png');
   background-size: cover; background-position: center 35%;
   filter: brightness(0.42) saturate(1.1);
 }
