@@ -1,6 +1,7 @@
 import React from 'react';
 import { INDUSTRIES } from '../data/productCatalog';
 import { Building2, Wind, Flame, Zap, ShieldCheck, GitCommit, Container } from 'lucide-react';
+import { AnimatedSection, AnimatedLetters } from '../hooks/useAnimations';
 
 const iconMap = { Building2, Wind, Flame, Zap, ShieldCheck, GitCommit, Container };
 
@@ -18,16 +19,19 @@ export default function IndustriesServed() {
   return (
     <section id="industries" className="industries-section">
       <div className="container">
-        <div className="section-title-wrap">
+        <AnimatedSection variant="fadeUp" className="section-title-wrap">
           <span className="section-tag">Industrial Applications</span>
-          <h2 className="section-title">Industries We Serve Across India & Overseas</h2>
+          <h2 className="section-title">
+            <AnimatedLetters text="Industries We Serve" stagger={32} />
+          </h2>
           <p className="section-subtitle">
             From offshore pressure vessels to high-speed PEB automated lines — OSCAR AUTO FLUX delivers the right flux grade for every critical weld.
           </p>
           <div className="section-rule" />
-        </div>
+        </AnimatedSection>
 
         {/* Photo Gallery Grid */}
+        <AnimatedSection variant="fadeUp" delay={100}>
         <div className="photo-gallery-grid">
           <div className="gallery-item">
             <img src="./images/windmill_welding.png" alt="Windmill Tower SAW Welding" />
@@ -58,25 +62,28 @@ export default function IndustriesServed() {
             </div>
           </div>
         </div>
+        </AnimatedSection>
 
         {/* Industry Cards */}
         <div className="industry-cards-grid">
-          {INDUSTRIES.map(ind => {
+          {INDUSTRIES.map((ind, idx) => {
             const Icon = iconMap[ind.icon] || Building2;
             const style = ICON_STYLES[ind.id] || { bg: '#F3F4F6', color: '#374151' };
             return (
-              <div key={ind.id} className="industry-card">
-                <div className="industry-icon" style={{ background: style.bg }}>
-                  <Icon size={24} color={style.color} />
+              <AnimatedSection key={ind.id} variant={idx % 2 === 0 ? 'slideLeft' : 'slideRight'} delay={idx * 80}>
+                <div className="industry-card">
+                  <div className="industry-icon" style={{ background: style.bg }}>
+                    <Icon size={24} color={style.color} />
+                  </div>
+                  <div className="industry-card-content">
+                    <h4>{ind.title}</h4>
+                    <p>{ind.description}</p>
+                    {ind.recommendedGrades.map((g, i) => (
+                      <span key={i} className="industry-grade-tag">{g}</span>
+                    ))}
+                  </div>
                 </div>
-                <div className="industry-card-content">
-                  <h4>{ind.title}</h4>
-                  <p>{ind.description}</p>
-                  {ind.recommendedGrades.map((g, i) => (
-                    <span key={i} className="industry-grade-tag">{g}</span>
-                  ))}
-                </div>
-              </div>
+              </AnimatedSection>
             );
           })}
         </div>
