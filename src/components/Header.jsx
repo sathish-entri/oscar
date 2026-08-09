@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronDown, FileText, Menu, X, MessageSquare, ShieldCheck } from 'lucide-react';
+import { ChevronDown, FileText, Menu, X, MessageSquare, ShieldCheck, Home, Layers, Factory, Award, Phone } from 'lucide-react';
 import { COMPANY_INFO } from '../data/productCatalog';
 
 const gradeList = [
@@ -73,7 +73,7 @@ export default function Header({ onOpenRfq, onSelectGradeById }) {
               onClick={() => setMobileOpen(!mobileOpen)}
               aria-label="Toggle mobile menu"
             >
-              {mobileOpen ? <X size={26} color="var(--red-accent)" /> : <Menu size={26} color="var(--navy)" />}
+              {mobileOpen ? <X size={22} color="var(--red-accent)" /> : <Menu size={22} color="var(--navy)" />}
             </button>
           </div>
         </div>
@@ -84,24 +84,30 @@ export default function Header({ onOpenRfq, onSelectGradeById }) {
         <div className="mobile-drawer-overlay" onClick={closeMobile}>
           <div className="mobile-drawer-content" onClick={e => e.stopPropagation()}>
             <div className="mobile-drawer-header">
-              <video
-                src="./logo.mp4"
-                className="header-logo-video header-logo-video--drawer"
-                autoPlay
-                loop
-                muted
-                playsInline
-                preload="auto"
-                aria-label="OSCAR AUTO FLUX Logo"
-              />
-              <button className="mobile-drawer-close" onClick={closeMobile}>
-                <X size={24} />
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
+                <video
+                  src="./logo.mp4"
+                  className="header-logo-video header-logo-video--drawer"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  preload="auto"
+                  aria-label="OSCAR AUTO FLUX Logo"
+                />
+                <span style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, color: '#fff', fontSize: '0.95rem', letterSpacing: '0.04em' }}>
+                  OSCAR AUTO FLUX
+                </span>
+              </div>
+              <button className="mobile-drawer-close" onClick={closeMobile} aria-label="Close menu">
+                <X size={20} />
               </button>
             </div>
 
             <div className="mobile-drawer-body">
               <a href="#hero" className="mobile-menu-item" onClick={closeMobile}>
-                Home
+                <Home size={18} className="mobile-menu-icon" />
+                <span>Home</span>
               </a>
 
               <div className="mobile-menu-accordion">
@@ -109,8 +115,11 @@ export default function Header({ onOpenRfq, onSelectGradeById }) {
                   className="mobile-menu-item mobile-menu-accordion-btn"
                   onClick={() => setMobileGradesOpen(!mobileGradesOpen)}
                 >
-                  <span>AUTOWELD Fluxes (7 Grades)</span>
-                  <ChevronDown size={18} style={{ transform: mobileGradesOpen ? 'rotate(180deg)' : 'rotate(0)', transition: 'transform 0.2s' }} />
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                    <Layers size={18} className="mobile-menu-icon" />
+                    <span>AUTOWELD Fluxes (7 Grades)</span>
+                  </div>
+                  <ChevronDown size={16} style={{ transform: mobileGradesOpen ? 'rotate(180deg)' : 'rotate(0)', transition: 'transform 0.2s' }} />
                 </button>
 
                 {mobileGradesOpen && (
@@ -133,13 +142,16 @@ export default function Header({ onOpenRfq, onSelectGradeById }) {
               </div>
 
               <a href="#industries" className="mobile-menu-item" onClick={closeMobile}>
-                Industries Served
+                <Factory size={18} className="mobile-menu-icon" />
+                <span>Industries Served</span>
               </a>
               <a href="#quality" className="mobile-menu-item" onClick={closeMobile}>
-                Quality &amp; QA Process
+                <Award size={18} className="mobile-menu-icon" />
+                <span>Quality &amp; QA Process</span>
               </a>
               <a href="#contact" className="mobile-menu-item" onClick={closeMobile}>
-                Contact Factory
+                <Phone size={18} className="mobile-menu-icon" />
+                <span>Contact Factory</span>
               </a>
 
               <div className="mobile-drawer-cta">

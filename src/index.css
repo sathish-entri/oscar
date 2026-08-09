@@ -1,6 +1,6 @@
 /* ============================================================
-   OSCAR AUTO FLUX — Industrial Design System v4  (Blue Theme)
-   Fonts: Bebas Neue · Barlow Condensed · Barlow
+   OSCAR AUTO FLUX — Industrial Design System v5 (Ador Style)
+   Fonts: Plus Jakarta Sans · Inter
    ============================================================ */
 
 :root {
@@ -33,9 +33,9 @@
   --text-muted: #4A6FA5;
   --text-dim: #7EA3C4;
 
-  --font-display: 'Bebas Neue', 'Barlow Condensed', sans-serif;
-  --font-heading: 'Barlow Condensed', sans-serif;
-  --font-body: 'Barlow', sans-serif;
+  --font-display: 'Plus Jakarta Sans', 'Inter', sans-serif;
+  --font-heading: 'Plus Jakarta Sans', 'Inter', sans-serif;
+  --font-body: 'Inter', 'Plus Jakarta Sans', sans-serif;
 
   --radius-sm: 4px;
   --radius-md: 8px;
@@ -355,51 +355,71 @@ input, select, textarea { font-family: var(--font-body); }
 .header-actions { display: flex; align-items: center; gap: 0.75rem; }
 .mobile-toggle {
   display: none;
-  background: rgba(14,165,233,0.1);
+  background: rgba(14,165,233,0.08);
   color: var(--navy);
-  padding: 0.4rem;
-  border-radius: var(--radius-sm);
-  border: 1.5px solid rgba(14,165,233,0.25);
-  transition: background 0.2s, border-color 0.2s;
+  padding: 0.45rem;
+  border-radius: 10px;
+  border: 1.5px solid rgba(14,165,233,0.3);
+  box-shadow: 0 2px 8px rgba(14,165,233,0.1);
+  transition: all 0.2s var(--ease-out);
 }
-.mobile-toggle:hover, .mobile-toggle:active { background: rgba(14,165,233,0.2); border-color: var(--red); }
+.mobile-toggle:hover, .mobile-toggle:active {
+  background: rgba(14,165,233,0.18);
+  border-color: var(--red);
+  transform: scale(1.04);
+}
 
-/* â”€â”€ Mobile Drawer â”€â”€ */
+/* ── Mobile Drawer ── */
 .mobile-drawer-overlay {
   position: fixed; inset: 0; z-index: 4000;
-  background: rgba(15,23,42,0.72); backdrop-filter: blur(10px);
+  background: rgba(11,22,40,0.75); backdrop-filter: blur(12px);
   display: flex; justify-content: flex-end; animation: fadeInOverlay 0.2s ease;
 }
 .mobile-drawer-content {
-  width: 85vw; max-width: 340px; height: 100vh; overflow-y: auto;
-  background: var(--white); box-shadow: -8px 0 30px rgba(0,0,0,0.2);
+  width: 86vw; max-width: 340px; height: 100vh; overflow-y: auto;
+  background: var(--white); box-shadow: -8px 0 32px rgba(0,0,0,0.25);
   display: flex; flex-direction: column; animation: slideDrawer 0.26s var(--ease-out);
+  border-radius: 20px 0 0 20px;
 }
 .mobile-drawer-header {
-  padding: 1.2rem 1.5rem; border-bottom: 2px solid var(--border);
+  padding: 1.1rem 1.4rem; border-bottom: 2px solid var(--border);
   display: flex; justify-content: space-between; align-items: center;
   background: var(--navy);
+  border-radius: 20px 0 0 0;
 }
-.mobile-drawer-close { background: transparent; color: rgba(255,255,255,0.7); padding: 0.3rem; }
+.mobile-drawer-close {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 8px;
+  color: rgba(255,255,255,0.9);
+  padding: 0.35rem;
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.2s;
+}
+.mobile-drawer-close:hover { background: rgba(255,255,255,0.2); color: #fff; }
+
 .mobile-drawer-body { padding: 0.5rem 0; display: flex; flex-direction: column; flex: 1; }
 .mobile-menu-item {
-  display: flex; align-items: center; padding: 0.92rem 1.5rem;
-  font-size: 1rem; font-weight: 700; color: var(--text-dark);
+  display: flex; align-items: center; gap: 0.75rem; padding: 0.88rem 1.4rem;
+  font-size: 0.95rem; font-weight: 600; color: var(--text-dark);
   border-bottom: 1px solid var(--border-light);
-  font-family: var(--font-heading); letter-spacing: 0.06em; text-transform: uppercase;
-  transition: background 0.14s, color 0.14s;
+  font-family: var(--font-heading); letter-spacing: 0.02em;
+  transition: background 0.16s, color 0.16s, padding-left 0.16s;
 }
-.mobile-menu-item:hover, .mobile-menu-item:active { background: var(--red-bg); color: var(--red); }
+.mobile-menu-icon { color: var(--red); flex-shrink: 0; }
+.mobile-menu-item:hover, .mobile-menu-item:active {
+  background: var(--red-bg); color: var(--red); padding-left: 1.6rem;
+}
 .mobile-menu-accordion-btn { justify-content: space-between; width: 100%; border: none; background: transparent; cursor: pointer; }
-.mobile-grades-sublist { background: var(--off-white); padding: 0.5rem 0 0.5rem 1.5rem; border-bottom: 1px solid var(--border-light); }
+.mobile-grades-sublist { background: var(--off-white); padding: 0.4rem 0 0.4rem 1.8rem; border-bottom: 1px solid var(--border-light); }
 .mobile-grade-item {
-  display: flex; align-items: center; gap: 0.6rem; padding: 0.6rem 1rem;
-  font-size: 0.9rem; font-weight: 600; color: var(--text-body);
-  font-family: var(--font-body); transition: color 0.14s;
+  display: flex; align-items: center; gap: 0.6rem; padding: 0.55rem 1rem;
+  font-size: 0.88rem; font-weight: 600; color: var(--text-body);
+  font-family: var(--font-body); transition: color 0.14s, padding-left 0.14s;
 }
-.mobile-grade-item:hover { color: var(--red); }
-.mobile-drawer-cta { padding: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem; margin-top: auto; }
-.mobile-drawer-footer { padding: 1rem 1.5rem; background: var(--off-white); font-size: 0.76rem; color: var(--text-muted); display: flex; align-items: center; gap: 0.5rem; border-top: 1px solid var(--border); }
+.mobile-grade-item:hover { color: var(--red); padding-left: 1.2rem; }
+.mobile-drawer-cta { padding: 1.25rem 1.4rem; display: flex; flex-direction: column; gap: 0.75rem; margin-top: auto; }
+.mobile-drawer-footer { padding: 0.9rem 1.4rem; background: var(--off-white); font-size: 0.76rem; color: var(--text-muted); display: flex; align-items: center; gap: 0.5rem; border-top: 1px solid var(--border); font-weight: 600; }
 
 /* ============================================================
    HERO — Clean Photo Style (reference: Ador)
