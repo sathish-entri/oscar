@@ -355,18 +355,19 @@ input, select, textarea { font-family: var(--font-body); }
 .header-actions { display: flex; align-items: center; gap: 0.75rem; }
 .mobile-toggle {
   display: none;
-  background: rgba(14,165,233,0.08);
-  color: var(--navy);
-  padding: 0.45rem;
+  background: var(--navy);
+  color: var(--white);
+  padding: 0.45rem 0.55rem;
   border-radius: 10px;
-  border: 1.5px solid rgba(14,165,233,0.3);
-  box-shadow: 0 2px 8px rgba(14,165,233,0.1);
+  border: 1.5px solid rgba(14,165,233,0.35);
+  box-shadow: 0 4px 14px rgba(11,22,40,0.3);
   transition: all 0.2s var(--ease-out);
 }
 .mobile-toggle:hover, .mobile-toggle:active {
-  background: rgba(14,165,233,0.18);
+  background: #11223B;
   border-color: var(--red);
-  transform: scale(1.04);
+  box-shadow: 0 4px 18px rgba(14,165,233,0.35);
+  transform: scale(1.05);
 }
 
 /* ── Mobile Drawer ── */
@@ -936,7 +937,7 @@ input, select, textarea { font-family: var(--font-body); }
 
   /* ── Hero Clean Mobile ── */
   .hero-clean { min-height: 85svh; }
-  .hero-clean-body { padding-top: 4.5rem; padding-bottom: 2.5rem; }
+  .hero-clean-body { padding-top: 6rem; padding-bottom: 2.5rem; }
   .hero-clean-title { font-size: clamp(2rem, 7.5vw, 3rem); }
   .hero-clean-badge { font-size: 0.65rem; padding: 0.3rem 0.75rem; }
   .hero-clean-sub { font-size: 0.92rem; margin-bottom: 1.4rem; }

@@ -55,7 +55,7 @@ export default function HeroSection({ onExploreProducts, onOpenRfq }) {
 
           {/* Trust chips */}
           <div className="hero-clean-chips">
-            {['BHEL Approved', 'L&amp;T Qualified', 'AWS A5.17/A5.23', 'ASME Sec II C'].map((b, i) => (
+            {['BHEL Approved', 'L&T Qualified', 'AWS A5.17/A5.23', 'ASME Sec II C'].map((b, i) => (
               <span key={i} className="hero-clean-chip">{b}</span>
             ))}
           </div>

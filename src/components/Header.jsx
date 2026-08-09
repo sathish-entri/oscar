@@ -73,7 +73,7 @@ export default function Header({ onOpenRfq, onSelectGradeById }) {
               onClick={() => setMobileOpen(!mobileOpen)}
               aria-label="Toggle mobile menu"
             >
-              {mobileOpen ? <X size={22} color="var(--red-accent)" /> : <Menu size={22} color="var(--navy)" />}
+              {mobileOpen ? <X size={22} color="#FFFFFF" /> : <Menu size={22} color="#FFFFFF" />}
             </button>
           </div>
         </div>
