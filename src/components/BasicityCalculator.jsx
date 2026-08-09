@@ -36,7 +36,7 @@ export default function BasicityCalculator() {
       <div className="container" style={{ position: 'relative', zIndex: 10 }}>
         {/* Section heading on dark background */}
         <div className="section-title-wrap" style={{ marginBottom: '3rem' }}>
-          <span className="section-tag" style={{ background: 'rgba(185,28,28,0.15)', borderColor: 'rgba(185,28,28,0.35)', color: '#F87171' }}>
+          <span className="section-tag" style={{ background: 'rgba(14,165,233,0.15)', borderColor: 'rgba(14,165,233,0.35)', color: '#38BDF8' }}>
             Interactive Engineering Tool
           </span>
           <h2 className="section-title" style={{ color: '#fff' }}>Basicity Index (BI) Calculator</h2>

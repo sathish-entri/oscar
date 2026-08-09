@@ -18,7 +18,7 @@ export default function QualityCertifications() {
     <section id="quality" className="quality-section">
       <div className="container">
         <AnimatedSection variant="fadeUp" className="section-title-wrap">
-          <span className="section-tag" style={{ background: 'rgba(185,28,28,0.15)', borderColor: 'rgba(185,28,28,0.3)', color: '#F87171' }}>
+          <span className="section-tag" style={{ background: 'rgba(14,165,233,0.15)', borderColor: 'rgba(14,165,233,0.3)', color: '#38BDF8' }}>
             Uncompromising Quality
           </span>
           <h2 className="section-title">
@@ -35,7 +35,7 @@ export default function QualityCertifications() {
           {COMPANY_INFO.certifications.map((cert, i) => (
             <AnimatedSection key={i} variant="scaleIn" delay={i * 100}>
               <div className="cert-card">
-                <div className="cert-icon"><Award size={24} color="#F87171" /></div>
+                <div className="cert-icon"><Award size={24} color="#38BDF8" /></div>
                 <div>
                   <div className="cert-name">{cert}</div>
                   <div className="cert-sub">Certified Quality Standard</div>

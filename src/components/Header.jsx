@@ -24,7 +24,16 @@ export default function Header({ onOpenRfq, onSelectGradeById }) {
         <div className="container header-inner">
           {/* Logo */}
           <a href="#hero" className="brand-logo" onClick={closeMobile}>
-            <img src="./logo.png" alt="OSCAR AUTO FLUX" className="header-logo-img" />
+            <video
+              src="./logo.mp4"
+              className="header-logo-video"
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="auto"
+              aria-label="OSCAR AUTO FLUX Logo"
+            />
           </a>
 
           {/* Desktop Navigation */}
@@ -64,7 +73,7 @@ export default function Header({ onOpenRfq, onSelectGradeById }) {
               onClick={() => setMobileOpen(!mobileOpen)}
               aria-label="Toggle mobile menu"
             >
-              {mobileOpen ? <X size={26} color="var(--red-accent)" /> : <Menu size={26} color="var(--slate-dark)" />}
+              {mobileOpen ? <X size={26} color="var(--red-accent)" /> : <Menu size={26} color="var(--navy)" />}
             </button>
           </div>
         </div>
@@ -75,7 +84,16 @@ export default function Header({ onOpenRfq, onSelectGradeById }) {
         <div className="mobile-drawer-overlay" onClick={closeMobile}>
           <div className="mobile-drawer-content" onClick={e => e.stopPropagation()}>
             <div className="mobile-drawer-header">
-              <img src="./logo.png" alt="OSCAR AUTO FLUX" style={{ height: '42px', width: 'auto' }} />
+              <video
+                src="./logo.mp4"
+                className="header-logo-video header-logo-video--drawer"
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="auto"
+                aria-label="OSCAR AUTO FLUX Logo"
+              />
               <button className="mobile-drawer-close" onClick={closeMobile}>
                 <X size={24} />
               </button>

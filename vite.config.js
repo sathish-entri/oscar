@@ -7,6 +7,11 @@ export default defineConfig({
   base: './',
   server: {
     port: 3000,
-    open: true
+    open: true,
+    watch: {
+      // Exclude the details/ folder — image files there may be locked by Picsart/other apps
+      ignored: ['**/details/**', '**/.git/**']
+    }
   }
 })
+
