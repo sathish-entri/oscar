@@ -4,20 +4,20 @@
    ============================================================ */
 
 :root {
-  /* Primary accent — Electric Blue (matches logo) */
-  --red: #0EA5E9;
-  --red-hover: #0284C7;
-  --red-bg: #EFF6FF;
-  --red-glow: rgba(14, 165, 233, 0.35);
-  --red-glow-strong: rgba(14, 165, 233, 0.55);
+  /* Primary accent — Sophisticated Corporate Blue (matches logo) */
+  --red: #2563EB;
+  --red-hover: #1D4ED8;
+  --red-bg: #F0F5FF;
+  --red-glow: rgba(37, 99, 235, 0.22);
+  --red-glow-strong: rgba(37, 99, 235, 0.38);
 
   /* Semantic aliases used in JSX components */
-  --red-accent: #0EA5E9;
-  --blue: #0EA5E9;
-  --blue-hover: #0284C7;
-  --blue-bg: #EFF6FF;
-  --blue-glow: rgba(14, 165, 233, 0.35);
-  --blue-glow-strong: rgba(14, 165, 233, 0.55);
+  --red-accent: #2563EB;
+  --blue: #2563EB;
+  --blue-hover: #1D4ED8;
+  --blue-bg: #F0F5FF;
+  --blue-glow: rgba(37, 99, 235, 0.22);
+  --blue-glow-strong: rgba(37, 99, 235, 0.38);
 
   --navy: #0B1628;
   --navy-mid: #111D35;
@@ -43,11 +43,11 @@
   --radius-xl: 20px;
   --radius-pill: 9999px;
 
-  --shadow-sm: 0 2px 8px rgba(14, 165, 233, 0.07);
-  --shadow-md: 0 8px 24px rgba(14, 165, 233, 0.13);
-  --shadow-lg: 0 16px 40px rgba(14, 165, 233, 0.16);
-  --shadow-red: 0 4px 20px rgba(14, 165, 233, 0.35);
-  --shadow-red-lg: 0 8px 32px rgba(14, 165, 233, 0.50);
+  --shadow-sm: 0 2px 8px rgba(37, 99, 235, 0.06);
+  --shadow-md: 0 8px 24px rgba(37, 99, 235, 0.12);
+  --shadow-lg: 0 16px 40px rgba(37, 99, 235, 0.15);
+  --shadow-red: 0 4px 18px rgba(37, 99, 235, 0.25);
+  --shadow-red-lg: 0 8px 28px rgba(37, 99, 235, 0.35);
 
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
 }
