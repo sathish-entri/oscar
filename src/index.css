@@ -663,15 +663,20 @@ textarea {
    ============================================================ */
 
 .main-header-wrap {
-  position: sticky;
-  top: 0;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
   z-index: 1000;
 }
 
 .main-header {
-  background: rgb(255, 255, 255);
-  border-bottom: 2px solid var(--border);
-  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.06);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
 }
 
 .header-inner {
