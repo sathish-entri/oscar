@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { ArrowRight, ChevronDown } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 
 export default function HeroSection({ onExploreProducts, onOpenRfq }) {
   const [loaded, setLoaded] = useState(false);
@@ -23,15 +23,6 @@ export default function HeroSection({ onExploreProducts, onOpenRfq }) {
             Creating The Best<br />
             Welding Experience
           </h1>
-
-          <div className="hero-ultra-actions">
-            <button className="btn btn-primary-red" onClick={onExploreProducts}>
-              Explore AUTOWELD Fluxes <ArrowRight size={16} />
-            </button>
-            <button className="btn hero-ultra-ghost" onClick={onOpenRfq}>
-              Get Quote
-            </button>
-          </div>
 
         </div>
       </div>
