@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import Header from './components/Header';
-import HeroSection from './components/HeroSection';
+import IndustriesServed from './components/IndustriesServed';
 import ProductSelector from './components/ProductSelector';
 import ProductModal from './components/ProductModal';
-import IndustriesServed from './components/IndustriesServed';
 import QualityCertifications from './components/QualityCertifications';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
@@ -33,10 +32,6 @@ export default function App() {
     }, 100);
   };
 
-  const handleExploreProducts = () => {
-    document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' });
-  };
-
   const handleSelectGradeById = (gradeName) => {
     const g = FLUX_GRADES.find(f => f.name === gradeName);
     if (g) setSelectedGrade(g);
@@ -49,10 +44,8 @@ export default function App() {
         onSelectGradeById={handleSelectGradeById}
       />
       <main>
-        <HeroSection
-          onExploreProducts={handleExploreProducts}
-          onOpenRfq={() => handleOpenRfq(null)}
-        />
+        {/* Industries We Serve as the main front page section */}
+        <IndustriesServed />
 
         {/* Scrolling Marquee Strip */}
         <div className="marquee-strip">
@@ -64,10 +57,6 @@ export default function App() {
         </div>
 
         <ProductSelector onSelectGrade={(grade) => setSelectedGrade(grade)} />
-
-        <hr className="section-divider" />
-
-        <IndustriesServed />
 
         <hr className="section-divider" />
 
