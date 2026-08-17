@@ -10,16 +10,7 @@ export default function Footer({ onSelectGrade }) {
           {/* Brand */}
           <div>
             <div className="brand-logo" style={{ marginBottom: '1.25rem' }}>
-              <video
-                src="./logo.mp4"
-                className="footer-logo-video"
-                autoPlay
-                loop
-                muted
-                playsInline
-                preload="auto"
-                aria-label="OSCAR AUTO FLUX Logo"
-              />
+              <img src="./logo.png" alt="OSCAR AUTO FLUX" className="footer-logo-img" />
             </div>
             <p className="footer-desc">India's premier specialist manufacturer of high-purity Agglomerated Submerged Arc Welding (SAW) Fluxes since 2010. Serving windmill, structural, pipeline and pressure vessel industries.</p>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.8rem', color: 'var(--red-accent)', fontWeight: 700 }}>
