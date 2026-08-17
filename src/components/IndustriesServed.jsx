@@ -20,12 +20,12 @@ export default function IndustriesServed() {
     <section id="industries" className="industries-section">
       <div className="container">
         <AnimatedSection variant="fadeUp" className="section-title-wrap">
-          <span className="section-tag">Industrial Applications</span>
-          <h2 className="section-title">
-            <AnimatedLetters text="Industries We Serve" stagger={32} />
-          </h2>
+          <span className="section-tag">SUBMERGED ARC WELDING FLUXES</span>
+          <h1 className="section-title">
+            <AnimatedLetters text="Creating The Best Welding Experience" stagger={32} />
+          </h1>
           <p className="section-subtitle">
-            From offshore pressure vessels to high-speed PEB automated lines — OSCAR AUTO FLUX delivers the right flux grade for every critical weld.
+            India's premier manufacturer of high-performance agglomerated SAW fluxes — engineered for zero-defect welds, high-speed automated lines, and extreme sub-zero impact toughness.
           </p>
           <div className="section-rule" />
         </AnimatedSection>
