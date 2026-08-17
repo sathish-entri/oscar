@@ -2398,13 +2398,9 @@ textarea {
     width: 44px;
   }
 
-  .header-rfq-btn span {
-    display: none;
-  }
-
+  .header-template-cta,
   .header-rfq-btn {
-    padding: 0.5rem 0.75rem;
-    min-height: 38px;
+    display: none !important;
   }
 
   /* ── Hero Clean Mobile ── */
