@@ -22,7 +22,7 @@ export default function IndustriesServed() {
         <AnimatedSection variant="fadeUp" className="section-title-wrap">
           <span className="section-tag">SUBMERGED ARC WELDING FLUXES</span>
           <h1 className="section-title">
-            <AnimatedLetters text="Creating The Best Welding Experience" stagger={32} />
+            <AnimatedLetters text="Industries We Serve" stagger={32} />
           </h1>
           <p className="section-subtitle">
             High-performance agglomerated SAW fluxes engineered for critical industrial fabrications.
