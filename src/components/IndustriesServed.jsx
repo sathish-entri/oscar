@@ -25,7 +25,7 @@ export default function IndustriesServed() {
             <AnimatedLetters text="Creating The Best Welding Experience" stagger={32} />
           </h1>
           <p className="section-subtitle">
-            India's premier manufacturer of high-performance agglomerated SAW fluxes — engineered for zero-defect welds, high-speed automated lines, and extreme sub-zero impact toughness.
+            High-performance agglomerated SAW fluxes engineered for critical industrial fabrications.
           </p>
           <div className="section-rule" />
         </AnimatedSection>
