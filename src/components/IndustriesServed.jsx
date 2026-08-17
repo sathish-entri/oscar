@@ -3,10 +3,9 @@ import { INDUSTRIES } from '../data/productCatalog';
 import { Building2, Wind, Flame, Zap, ShieldCheck, GitCommit, Container } from 'lucide-react';
 import { AnimatedSection, AnimatedLetters } from '../hooks/useAnimations';
 
-import windmillImg from '../assets/images/windmill_welding.png';
-import heavyStructImg from '../assets/images/hero_banner.png';
-import labTestingImg from '../assets/images/lab_testing.png';
-import fluxPackImg from '../assets/images/flux_manufacturing.png';
+import galleryImg1 from '../assets/images/gallery_img1.jpg';
+import galleryImg2 from '../assets/images/gallery_img2.jpg';
+import galleryImg3 from '../assets/images/gallery_img3.jpg';
 
 const iconMap = { Building2, Wind, Flame, Zap, ShieldCheck, GitCommit, Container };
 
@@ -37,36 +36,52 @@ export default function IndustriesServed() {
 
         {/* Photo Gallery Grid */}
         <AnimatedSection variant="fadeUp" delay={100}>
-        <div className="photo-gallery-grid">
-          <div className="gallery-item">
-            <img src={windmillImg} alt="Windmill Tower SAW Welding" />
-            <div className="gallery-item-overlay">
-              <div className="gallery-item-label">Windmill Tower SAW Welding</div>
-              <div className="gallery-item-sub">AUTOWELD Gr-4 · -40°C Impact · H₂ &lt; 4mL/100g</div>
+          <div className="photo-gallery-grid">
+
+            {/* First item: VIDEO — mandatory first position */}
+            <div className="gallery-item gallery-item-video">
+              <video
+                src="./gallery_video.mov"
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="gallery-video"
+              />
+              <div className="gallery-item-overlay">
+                <div className="gallery-item-label">Welding Operations</div>
+                <div className="gallery-item-sub">OSCAR AUTO FLUX — Live Process</div>
+              </div>
             </div>
-          </div>
-          <div className="gallery-item">
-            <img src={heavyStructImg} alt="Heavy Structural Fabrication" />
-            <div className="gallery-item-overlay">
-              <div className="gallery-item-label">Heavy Structural Fabrication</div>
-              <div className="gallery-item-sub">AUTOWELD Gr-1 / Gr-3</div>
+
+            {/* Image 2 */}
+            <div className="gallery-item">
+              <img src={galleryImg1} alt="Gallery Image 1" />
+              <div className="gallery-item-overlay">
+                <div className="gallery-item-label">Headline Coming Soon</div>
+                <div className="gallery-item-sub">AUTOWELD Grade — Description</div>
+              </div>
             </div>
-          </div>
-          <div className="gallery-item">
-            <img src={labTestingImg} alt="ASME QA Batch Testing" />
-            <div className="gallery-item-overlay">
-              <div className="gallery-item-label">ASME Batch QA Testing</div>
-              <div className="gallery-item-sub">XRF Chemical &amp; Mechanical Verification</div>
+
+            {/* Image 3 */}
+            <div className="gallery-item">
+              <img src={galleryImg2} alt="Gallery Image 2" />
+              <div className="gallery-item-overlay">
+                <div className="gallery-item-label">Headline Coming Soon</div>
+                <div className="gallery-item-sub">AUTOWELD Grade — Description</div>
+              </div>
             </div>
-          </div>
-          <div className="gallery-item">
-            <img src={fluxPackImg} alt="Flux Granule Manufacturing" />
-            <div className="gallery-item-overlay">
-              <div className="gallery-item-label">Agglomeration &amp; Packaging</div>
-              <div className="gallery-item-sub">0.2–2.0mm Grain · &lt;0.05% Moisture</div>
+
+            {/* Image 4 */}
+            <div className="gallery-item">
+              <img src={galleryImg3} alt="Gallery Image 3" />
+              <div className="gallery-item-overlay">
+                <div className="gallery-item-label">Headline Coming Soon</div>
+                <div className="gallery-item-sub">AUTOWELD Grade — Description</div>
+              </div>
             </div>
+
           </div>
-        </div>
         </AnimatedSection>
 
         {/* Industry Cards */}

@@ -9,8 +9,8 @@ export default defineConfig({
     port: 3000,
     open: true,
     watch: {
-      // Exclude the details/ folder — image files there may be locked by Picsart/other apps
-      ignored: ['**/details/**', '**/.git/**']
+      // Exclude folders where images may be locked by external tools
+      ignored: ['**/details/**', '**/.git/**', '**/new images/**', '**/public/new images/**', '**/*.mov', '**/*.heic']
     }
   }
 })
