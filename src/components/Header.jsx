@@ -56,8 +56,8 @@ export default function Header({ onOpenRfq, onSelectGradeById }) {
 
           {/* Actions */}
           <div className="header-actions">
-            <button className="btn btn-red-pill header-rfq-btn" onClick={onOpenRfq}>
-              <FileText size={15} /><span>Get Quote</span>
+            <button className="btn header-template-cta" onClick={onOpenRfq}>
+              <span>Get Quote</span> <ChevronDown size={15} style={{ transform: 'rotate(-90deg)' }} />
             </button>
             <button
               className="mobile-toggle"
