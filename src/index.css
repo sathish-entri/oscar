@@ -1081,13 +1081,13 @@ input, select, textarea { font-family: var(--font-body); }
   background-image: url('./images/hero_banner.png');
   background-size: cover;
   background-position: center 40%;
-  filter: brightness(0.38) saturate(1.2);
+  filter: brightness(0.62) saturate(1.15);
 }
 
 .hero-ultra-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at center, rgba(15,23,42,0.65) 0%, rgba(15,23,42,0.92) 80%);
+  background: linear-gradient(180deg, rgba(15,23,42,0.3) 0%, rgba(15,23,42,0.65) 100%);
 }
 
 .hero-ultra-container {
@@ -1117,16 +1117,20 @@ input, select, textarea { font-family: var(--font-body); }
   font-family: 'Bebas Neue', 'Barlow Condensed', sans-serif;
   font-size: clamp(3.6rem, 8.5vw, 6.8rem);
   font-weight: 400;
-  color: #ffffff;
+  color: #ffffff !important;
   line-height: 1.05;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   margin-bottom: 2.2rem;
-  text-shadow: 0 4px 24px rgba(0,0,0,0.5);
+  text-shadow: 0 4px 28px rgba(0,0,0,0.75), 0 2px 10px rgba(0,0,0,0.85);
+}
+
+.hero-ultra-title span {
+  color: #ffffff !important;
 }
 
 .hero-ultra-highlight {
-  color: var(--red);
+  color: #ffffff !important;
   display: inline-block;
 }
 

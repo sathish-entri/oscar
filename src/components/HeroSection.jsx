@@ -21,7 +21,7 @@ export default function HeroSection({ onExploreProducts, onOpenRfq }) {
           
           <h1 className="hero-ultra-title">
             Creating The Best<br />
-            <span className="hero-ultra-highlight">Welding Experience</span>
+            Welding Experience
           </h1>
 
           <div className="hero-ultra-actions">
