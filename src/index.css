@@ -1069,10 +1069,10 @@ input, select, textarea { font-family: var(--font-body); }
   min-height: 85vh;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   overflow: hidden;
   background: var(--navy);
-  text-align: center;
+  text-align: right;
 }
 
 .hero-ultra-bg {
@@ -1087,7 +1087,7 @@ input, select, textarea { font-family: var(--font-body); }
 .hero-ultra-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(15,23,42,0.2) 0%, rgba(15,23,42,0.45) 100%);
+  background: linear-gradient(270deg, rgba(15,23,42,0.65) 0%, rgba(15,23,42,0.2) 60%, transparent 100%);
 }
 
 .hero-ultra-container {
@@ -1095,14 +1095,16 @@ input, select, textarea { font-family: var(--font-body); }
   z-index: 10;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   padding: 5rem 1.5rem;
 }
 
 .hero-ultra-content {
-  max-width: 900px;
-  margin: 0 auto;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: 0;
+  text-align: right;
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
@@ -1115,14 +1117,14 @@ input, select, textarea { font-family: var(--font-body); }
 
 .hero-ultra-title {
   font-family: 'Bebas Neue', 'Barlow Condensed', sans-serif;
-  font-size: clamp(3.6rem, 8.5vw, 6.8rem);
+  font-size: clamp(2.2rem, 4.5vw, 3.8rem);
   font-weight: 400;
   color: #ffffff !important;
-  line-height: 1.05;
+  line-height: 1.1;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   margin-bottom: 0;
-  text-shadow: 0 4px 30px rgba(0,0,0,0.85), 0 2px 12px rgba(0,0,0,0.9);
+  text-shadow: 0 3px 20px rgba(0,0,0,0.85), 0 2px 8px rgba(0,0,0,0.9);
 }
 
 .hero-ultra-title span {
