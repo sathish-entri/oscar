@@ -41,7 +41,7 @@ export default function IndustriesServed() {
             </div>
           </div>
           <div className="gallery-item">
-            <img src="/images/hero_banner.png" alt="Heavy Structural Fabrication" />
+            <img src="./images/hero_banner.png" alt="Heavy Structural Fabrication" />
             <div className="gallery-item-overlay">
               <div className="gallery-item-label">Heavy Structural Fabrication</div>
               <div className="gallery-item-sub">AUTOWELD Gr-1 / Gr-3</div>

@@ -1043,7 +1043,7 @@ textarea {
 .hero-clean-bg {
   position: absolute;
   inset: 0;
-  background-image: url('/images/hero_banner.png');
+  background-image: url('./images/hero_banner.png');
   background-size: cover;
   background-position: center 40%;
   filter: brightness(0.52) saturate(1.1);
