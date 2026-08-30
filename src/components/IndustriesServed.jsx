@@ -41,7 +41,7 @@ export default function IndustriesServed() {
             {/* First item: VIDEO — mandatory first position */}
             <div className="gallery-item gallery-item-video">
               <video
-                src="./gallery_video.mov"
+                src="./gallery_video.mp4"
                 autoPlay
                 muted
                 loop
