@@ -12,7 +12,7 @@ const gradeList = [
   'AUTOWELD Gr-7SP'
 ];
 
-export default function Header({ onOpenRfq, onSelectGradeById }) {
+export default function Header({ onOpenRfq, onSelectGradeById, logoRef }) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileGradesOpen, setMobileGradesOpen] = useState(false);
 
@@ -24,7 +24,12 @@ export default function Header({ onOpenRfq, onSelectGradeById }) {
         <div className="container header-inner">
           {/* Logo */}
           <a href="#hero" className="brand-logo" onClick={closeMobile}>
-            <img src="./logo.png" alt="OSCAR AUTO FLUX" className="header-logo-img" />
+            <img
+              ref={logoRef}
+              src="./logo.png"
+              alt="OSCAR AUTO FLUX"
+              className="header-logo-img"
+            />
           </a>
 
           {/* Desktop Navigation */}

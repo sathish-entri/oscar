@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Header from './components/Header';
+import LogoIntro from './components/LogoIntro';
+import FrontPageSlider from './components/FrontPageSlider';
 import IndustriesServed from './components/IndustriesServed';
 import ProductSelector from './components/ProductSelector';
 import ProductModal from './components/ProductModal';
@@ -24,6 +26,8 @@ const MARQUEE_ITEMS = [
 export default function App() {
   const [selectedGrade, setSelectedGrade] = useState(null);
   const [rfqGrade, setRfqGrade] = useState(null);
+  const [introFinished, setIntroFinished] = useState(false);
+  const logoRef = useRef(null);
 
   const handleOpenRfq = (grade = null) => {
     setRfqGrade(grade);
@@ -39,13 +43,20 @@ export default function App() {
 
   return (
     <div style={{ background: 'var(--navy)' }}>
+      {!introFinished && (
+        <LogoIntro
+          targetRef={logoRef}
+          onComplete={() => setIntroFinished(true)}
+        />
+      )}
       <Header
+        logoRef={logoRef}
         onOpenRfq={() => handleOpenRfq(null)}
         onSelectGradeById={handleSelectGradeById}
       />
       <main>
-        {/* Industries We Serve as the main front page section */}
-        <IndustriesServed />
+        {/* Fullscreen Media Slider Front Page */}
+        <FrontPageSlider onOpenRfq={() => handleOpenRfq(null)} />
 
         {/* Scrolling Marquee Strip */}
         <div className="marquee-strip">

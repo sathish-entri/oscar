@@ -9,8 +9,8 @@ export default defineConfig({
     port: 3000,
     open: true,
     watch: {
-      // Exclude folders where images may be locked by external tools
-      ignored: ['**/details/**', '**/.git/**', '**/new images/**', '**/public/new images/**', '**/*.mov', '**/*.heic']
+      // Exclude folders locked by external tools or Windows indexing
+      ignored: ['**/details/**', '**/.git/**', '**/new images/**', '**/public/new images/**', '**/*.heic', '**/*.pdf', '**/*.mov', '**/*.MOV']
     }
   }
 })
